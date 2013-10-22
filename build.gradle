@@ -26,7 +26,10 @@ android {
 // $ ./gradlew assembleTest
 // gradle assembleTest
 dependencies {
-    instrumentTestCompile files('libs/dagger-1.1.0.jar',
+    instrumentTestCompile files(
+            'libs/guava-14.0.1.jar', // errors without guava
+            'libs/mockito-all-1.9.5.jar',
+            'libs/dagger-1.1.0.jar',
             'libs/dagger-compiler-1.1.0.jar',
             'libs/espresso-1.0-SNAPSHOT.jar',
             'libs/hamcrest-core-1.1.jar',
