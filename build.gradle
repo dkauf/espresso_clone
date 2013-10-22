@@ -28,6 +28,8 @@ android {
 // gradle assembleTest
 dependencies {
     instrumentTestCompile files(
+            'libs/android-support-v4.jar',
+            'libs/android-support-v7-appcompat.jar',
             'libs/testapp.jar', // built with mvn package
             'libs/guava-14.0.1.jar', // errors without guava
             'libs/mockito-all-1.9.5.jar', // dl from web
