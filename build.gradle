@@ -23,12 +23,14 @@ android {
     }
 }
 
+// http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Testing
 // $ ./gradlew assembleTest
 // gradle assembleTest
 dependencies {
     instrumentTestCompile files(
+            'libs/testapp.jar', // built with mvn package
             'libs/guava-14.0.1.jar', // errors without guava
-            'libs/mockito-all-1.9.5.jar',
+            'libs/mockito-all-1.9.5.jar', // dl from web
             'libs/dagger-1.1.0.jar',
             'libs/dagger-compiler-1.1.0.jar',
             'libs/espresso-1.0-SNAPSHOT.jar',
