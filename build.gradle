@@ -23,8 +23,19 @@ android {
     }
 }
 
+// $ ./gradlew assembleTest
+// gradle assembleTest
 dependencies {
-    instrumentTestCompile files('libs/espresso-1.0-SNAPSHOT.jar',
+    instrumentTestCompile files('libs/dagger-1.1.0.jar',
+            'libs/dagger-compiler-1.1.0.jar',
+            'libs/espresso-1.0-SNAPSHOT.jar',
+            'libs/hamcrest-core-1.1.jar',
+            'libs/hamcrest-integration-1.1.jar',
+            'libs/hamcrest-library-1.1.jar',
+            'libs/javawriter-2.1.1.jar',
+            'libs/javax.annotation-api-1.2.jar',
+            'libs/javax.inject-1.jar',
+            'libs/jsr305-1.3.9.jar',
             'libs/testrunner-1.0-SNAPSHOT.jar',
             'libs/testrunner-runtime-1.0-SNAPSHOT.jar')
     instrumentTestCompile 'org.hamcrest:hamcrest-all:1.1'
