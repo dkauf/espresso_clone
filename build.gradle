@@ -1,0 +1,31 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.6.+'
+    }
+}
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "17.0.0"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 18
+        testInstrumentationRunner "com.google.android.apps.common.testing.testrunner.GoogleInstrumentationTestRunner"
+    }
+}
+
+dependencies {
+    instrumentTestCompile files('libs/espresso-1.0-SNAPSHOT.jar',
+            'libs/testrunner-1.0-SNAPSHOT.jar',
+            'libs/testrunner-runtime-1.0-SNAPSHOT.jar')
+    instrumentTestCompile 'org.hamcrest:hamcrest-all:1.1'
+}
